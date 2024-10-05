@@ -22,7 +22,7 @@ def read_heuristics(file_name) -> dict:
 
 def a_star(start, goal, graph, heuristics) -> (list, int):
     open_list = [(heuristics[start], 0, start)]  # (estimated total cost, path cost, current city)
-    visited = {}  # Track the best cost to reach each node
+    visited = {}
     closed_list = set()  # Keep track of fully explored nodes
     parent_map = {start: None}  # To reconstruct the path
 
