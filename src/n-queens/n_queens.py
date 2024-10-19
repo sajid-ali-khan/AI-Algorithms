@@ -1,6 +1,9 @@
 from n_queen_visualization import draw_multiple_solutions
 
 def solve_n_queens(n):
+    if n < 4:
+        print('No possible solutions. Try n >= 4.')
+        return
     marked = [False]*n
     left_diagonal = set()
     right_diagonal = set()
