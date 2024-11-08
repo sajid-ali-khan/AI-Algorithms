@@ -1,4 +1,3 @@
-import time
 from collections import defaultdict
 from heapq import heappush, heappop
 
@@ -55,9 +54,7 @@ def main() -> None:
     heuristics = read_heuristics('heuristics.txt')
 
     start = input("Enter the start city : ")[0].lower()
-    time.sleep(0.4)
     print("The goal city is BUCHAREST(b).\n")
-    time.sleep(0.4)
     hops, path_cost = a_star(start, 'b', graph, heuristics)
     if hops:
         print('Found path:', ' -> '.join(hops))
